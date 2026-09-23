@@ -2,3 +2,26 @@
 * { box-sizing: border-box; margin: 0; padding: 0; }
 body { font-family: system-ui, sans-serif; }
 img { max-width: 98%; display: block; }
+/* HERO - Flexbox Mobile-First */
+.hero { padding: 2rem 1rem; background: #f8f9fa; }
+
+.hero-flex {
+    display: flex;
+    flex-direction: column;   /* Móvil: imagen abajo */
+    gap: 2rem;
+    align-items: center;
+}
+
+.hero-text { text-align: center; }
+.hero-text h1 { font-size: 1.75rem; margin-bottom: 1rem; }
+.hero-text p { color: #6c757d; margin-bottom: 1.5rem; }
+
+.hero-img img { border-radius: 1rem; width: 100%; }
+
+/* Desktop */
+@media (min-width: 992px) {
+    .hero-flex { flex-direction: row; }   /* Texto | Imagen */
+    .hero-text { text-align: left; flex: 1; }
+    .hero-img { flex: 1; }
+    .hero-text h1 { font-size: 2.5rem; }
+}
