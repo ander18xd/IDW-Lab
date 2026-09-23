@@ -1,0 +1,4 @@
+/* Reset base */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: system-ui, sans-serif; }
+img { max-width: 98%; display: block; }
