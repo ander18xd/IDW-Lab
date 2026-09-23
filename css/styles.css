@@ -25,3 +25,27 @@ img { max-width: 98%; display: block; }
     .hero-img { flex: 1; }
     .hero-text h1 { font-size: 2.5rem; }
 }
+/* CURSOS - CSS Grid Mobile-First */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;   /* Móvil: 1 columna */
+    gap: 1.5rem;
+}
+
+.curso {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,.08);
+    transition: transform .2s;
+}
+.curso:hover { transform: translateY(-5px); }
+.curso h3 { font-size: 1.15rem; margin-bottom: .5rem; }
+.curso p { color: #6c757d; font-size: .95rem; margin: 0; }
+
+@media (min-width: 576px) {           /* Tablet: 2 columnas */
+    .card-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (min-width: 992px) {           /* Desktop: 3 columnas */
+    .card-grid { grid-template-columns: repeat(3, 1fr); }
+}
